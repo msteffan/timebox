@@ -13,6 +13,7 @@ module ApplicationHelper
     end
 
     # manages length class assigned to Guardian articles
+    # This method is included in the Article model. How could you DRY it up?
     def ext_length_class(result)
         article_length = sanitize(result['fields']['body'], :tags=>[]).split(" ").length
         if article_length <= 400

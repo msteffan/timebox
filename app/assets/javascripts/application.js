@@ -20,6 +20,12 @@
 $(document).ready(function(){
     var counter = 1;
     // this function controls the clicks on the article navigation bar to sort content by time
+    /*
+    // DRYing:
+    function animate_width(el, amount, display_val){
+      el.animate({width: amount}, 800).css("display", display_val)
+    }
+    */
     $(".columns").click(function(){
         var self = this
         $('h1').each(function(){
@@ -28,6 +34,7 @@ $(document).ready(function(){
                     $(this).parent().animate({
                         width: "100%"
                     }, 800, function() {})
+                    // This last argument, the function, is an optional parameter
                     $(this).parent().css("display", "block")
                 } else {
                     $(this).parent().animate({
@@ -47,6 +54,8 @@ $(document).ready(function(){
 
      // this function controls clicks on Guardian content (if it has been loaded after a search) and controls expanding/descreasing the size of the columns
      $(".guardianClick").click(function(){
+       // No need to declare twice
+       // var self = this
          if (counter % 2 != 0) {
              var self = this;
 
@@ -73,3 +82,5 @@ $(document).ready(function(){
      }); // closes guardianClick function
 
 }); // closes document.ready
+
+// If you have to comment your code to remind yourself which brackets close what, you should probably extract a bunch of your code into new, smaller methods.

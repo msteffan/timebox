@@ -56,6 +56,7 @@ class UsersController < ApplicationController
     def sign_in
     end
 
+# This is a really long method! Granted, it's pretty much just taken from what we did in class. Still, I'd suggest seeing if you can keep all your methods to 5 lines or fewer. This is an actual programming methodology used by many.
     def sign_in!
         @user = User.find_by(username: params[:username])
         if !@user
@@ -68,7 +69,7 @@ class UsersController < ApplicationController
           message = "You're signed in, #{@user.username}!"
           cookies[:username] = {
               value: @user.username,
-
+# Watch out for the dangling comma here
           }
           session[:user] = @user
           redirect_to articles_path

@@ -187,6 +187,13 @@
  	border-bottom: 5px solid #FFAF94;
  }
 
+ /*
+ Might make a class for all of these above with:
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+ That way, you only need to specify the color on each of them.
+ */
+
  /*************************content container elements**************************/
 .no-overflow {
     height: 30px;
