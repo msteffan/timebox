@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
    # get '/pins', to: 'pins#index'
    # post '/pins', to: 'pins#create'
+   # Might call this a "save" instead of a like
    get '/likes', to: 'likes#create'
    # get '/likes/:id', to: 'likes#destroy'
    # post '/likes', to: 'likes#create'

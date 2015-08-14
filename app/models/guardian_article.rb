@@ -1,5 +1,5 @@
 require 'httparty'
-
+# Great use of a custom model
 class GuardianArticle
     API_URL = 'http://content.guardianapis.com'
     attr_reader :response, :results, :length
